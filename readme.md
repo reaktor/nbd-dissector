@@ -1,7 +1,15 @@
-After copying it to the plugins folder, restart wireshark, begin a network capture on whatever interface makes sense for you, and you can filter out the protocol by typing ssb in the filter bar.
+Panasonic has a small header when distributing files over multicast.
 
-Then you can click on a packet and explore like normal.
+It's broadcast from NBD server to NBD clients on seatbacks.
 
-There are definitely improvements to be made if you wanna hack around, like capturing the protocol, maybe reorganizing how multiple advertisements are shown. Its a small script.
+# installation
 
-![image of the dissector showing the parts of a scuttlebutt advertisement, ip address, port, and public key](ssb-dissector.png)
+    cp pac-nbd.lua ${XDG_CONFIG_DIR:-${HOME}/.config}/wireshark/plugins/
+
+# development
+
+command-shift-L is your friend
+
+# format
+
+![](packet-format.png)
